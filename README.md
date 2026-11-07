@@ -34,7 +34,8 @@
 
 ## 快速上手（普通用户）
 
-1. **下载 APK**：在本仓库根目录点 `CarLyrics.apk` → `Download raw file`（国内网络如果 GitHub 原始文件慢，可用代理或 `ghproxy` 类加速站）。
+1. **下载 APK**：到 **[Releases 页面](https://github.com/cgjn19820810-bot/car-lyrics/releases)** 下载 `CarLyrics.apk`
+   （仓库根目录也放了一份同签名的最新 APK；国内网络直连 GitHub 慢时，可在下载链接前加 `ghproxy` 类加速前缀）。
 2. **安装**：传到手机上打开安装，允许「安装未知来源应用」。
    从旧版本升级**直接覆盖安装**即可（签名一致，数据不丢）。
 3. **首次使用**：
