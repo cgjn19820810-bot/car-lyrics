@@ -1,0 +1,25 @@
+# 构建中间产物（build.sh 每轮用时间戳新目录，无需入库）
+build/
+*.idsig
+build.log
+
+# PC 回归测试的编译产物与临时样本
+test/out/
+test/cc.log
+test/__pycache__/
+test/mine.raw
+test/mine.uri.txt
+
+# 版权音乐样本不入库（自己按 test/README.md 切一段，文件名保持一致即可）
+test/sample.wav
+test/sample16.wav
+test/sample16.pcm
+test/ex.mp3
+test/ex.pcm
+
+# Hanning 常量源文本（可由 shazam-ref/rs_hanning.rs 再生，正式产物是 Hanning.java）
+test/Hanning.java.txt
+
+# 杂项
+.DS_Store
+Thumbs.db

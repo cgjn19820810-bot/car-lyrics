@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车机歌词"
+            android:textColor="#12161C"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="麦克风听车里的歌 → 自动识别 → 全屏滚动同步歌词"
+            android:textColor="#6B7684"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 · 识别引擎"
+                android:textColor="#12161C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="主引擎 Shazam（免费、不限次、无需任何密钥）。ACRCloud 和 AudD 只是「Shazam 认不出」时的可选兜底，填上能再抬高一截命中率；不填也能用。"
+                android:textColor="#6B7684"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnConsole"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_ghost"
+                android:gravity="center"
+                android:text="打开 ACRCloud 控制台 · 去拿这三项"
+                android:textColor="#1B6EF3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Host"
+                android:textColor="#4A5561"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_bg"
+                android:hint="粘贴控制台里的 Host，例：identify-cn-north-1.acrcloud.cn"
+                android:inputType="textUri"
+                android:padding="10dp"
+                android:textColor="#12161C"
+                android:textColorHint="#A8B0BA"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="⚠ 这一项必须和控制台里显示的一字不差。不同区域是不同的域名（如 identify-us-west-2.acrcloud.com），填错会一直报「Access Key 不对」。"
+                android:textColor="#C2410C"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Access Key"
+                android:textColor="#4A5561"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAccessKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_bg"
+                android:hint="控制台里的 Access Key"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#12161C"
+                android:textColorHint="#A8B0BA"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Access Secret"
+                android:textColor="#4A5561"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAccessSecret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_bg"
+                android:hint="控制台里的 Access Secret"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#12161C"
+                android:textColorHint="#A8B0BA"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="#E3E7ED" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="兜底引擎 AudD（可选）"
+                android:textColor="#4A5561"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="只在 Shazam、ACRCloud 都没听出来时才用。去 dashboard.audd.io 注册拿 token（送 300 次、不用信用卡）。留空也能跑，但匿名额度每天只有 10 次。"
+                android:textColor="#8A93A0"
+                android:textSize="11sp" />
+
+            <EditText
+                android:id="@+id/etAudd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/input_bg"
+                android:hint="AudD api_token（留空=每天仅 10 次）"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#12161C"
+                android:textColorHint="#A8B0BA"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 · 识别参数"
+                android:textColor="#12161C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnPrebuf"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_ghost"
+                android:gravity="center"
+                android:text="预录音缓冲：开"
+                android:textColor="#1B6EF3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="开着：麦克风常驻录音，切歌后立刻能识别（推荐）。关掉：每次现录，反应慢一些但更省电。"
+                android:textColor="#8A93A0"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/btnAggr"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_ghost"
+                android:gravity="center"
+                android:text="积极识别：开"
+                android:textColor="#1B6EF3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="开着：还不知道在放什么歌时每 12 秒重听一次，连续失败也只退避 20 秒 —— 识别率最高。关掉：每 20 秒一次、退避 30 秒，更省电省流量。"
+                android:textColor="#8A93A0"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="单次送检时长"
+                    android:textColor="#4A5561"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvRecordVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 秒"
+                    android:textColor="#1B6EF3"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/sbRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="越长越容易认出来（车里噪声对指纹的干扰被摊薄），推荐 10 秒。官方接口只识别前 12 秒，再多是白送，所以上限就卡在 12。"
+                android:textColor="#8A93A0"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="重新识别间隔"
+                    android:textColor="#4A5561"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvIntervalVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60 秒"
+                    android:textColor="#1B6EF3"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/sbInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="19" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="识别到歌名后按「这首歌还剩多久」自动排期，间隔封顶就是上面这个值。调小反应快、费额度；调大省额度、切歌可能晚几秒才发现。15~300 秒。"
+                android:textColor="#8A93A0"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="歌词偏移微调"
+                    android:textColor="#4A5561"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvShiftVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0 秒"
+                    android:textColor="#1B6EF3"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/sbShift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="歌词比声音快就往右拉，慢就往左拉。"
+                android:textColor="#8A93A0"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/btn_primary"
+            android:gravity="center"
+            android:text="开始 · 进入全屏歌词"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_ghost"
+            android:gravity="center"
+            android:text="测试识别一次（按上面设的时长听一遍）"
+            android:textColor="#1B6EF3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card_bg"
+            android:padding="12dp"
+            android:text="就绪"
+            android:textColor="#4A5561"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 · 保活设置（荣耀/华为必做）"
+                android:textColor="#12161C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="歌词界面常亮时不会被杀。若你要锁屏后继续识别，需要放行后台运行。"
+                android:textColor="#6B7684"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnBattery"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_ghost"
+                android:gravity="center"
+                android:text="允许后台耗电（忽略电池优化）"
+                android:textColor="#1B6EF3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btnAutostart"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_ghost"
+                android:gravity="center"
+                android:text="打开启动管理 / 应用详情"
+                android:textColor="#1B6EF3"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="24dp"
+            android:text="原理：麦克风常驻录音进环形缓冲 → 识别时往回看几秒、裁掉尾部留白，只送真在放歌的那段 → 先在本地算 Shazam 指纹（免费、不限次）发去认歌名和「歌里到第几秒」，没听出来自动换 ACRCloud / AudD 再试 → 拉带时间轴的歌词 → 按进度滚动显示。太短或太静的样本直接不发。识别到歌名后按剩余时长调度，尽量少调接口。全屏歌词界面里双击屏幕可立刻重听一次。"
+            android:textColor="#8A93A0"
+            android:textSize="11sp" />
+    </LinearLayout>
+</ScrollView>
